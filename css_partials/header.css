@@ -1,0 +1,141 @@
+header {
+    padding: 20px 5%;
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+}
+
+header.blogpost-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header#mainpage-header {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 70%, #D9C39F), url("../img/summer_small.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+}
+
+.fa-globe {
+    float: left;
+    font-size: 50px;
+}
+
+#main-navigation {
+    display: none;
+}
+
+#main-navigation li {
+    list-style-type: none;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+#main-navigation li a{
+    padding: 12px 25px;
+    font-size: 1.5rem;
+}
+
+.button-container {
+    margin: 60vh auto 0;
+}
+
+.action-button { 
+    padding: 15px 50px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-box {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+#page-title {
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+#page-title-main { 
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+}
+
+#page-title-sub {
+    text-align: right;
+    font-size: 1.5rem;
+    letter-spacing: 0.6rem;
+}
+
+@media screen and (min-width: 650px) {
+
+    header#mainpage-header{
+        background-position: top;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 70%, #D9C39F), url("../img/summer_large.jpeg");
+    }
+
+    #main-navigation {
+        display: flex;
+        align-items: center; 
+        height: 50px;
+        width: 80%;
+    }
+
+    .button-container {
+        margin-top: calc(60vh - 50px);
+    }
+  }
+
+@media screen and (min-width: 950px) {
+
+    header#mainpage-header {
+        height: 95vh;
+    }
+
+    .button-container {
+        position: absolute;
+        top: 20px;
+        right: 5%;
+        margin: 0;
+    }
+
+    #page-title-main { 
+        font-size: 84px;
+        font-weight: 700;
+        letter-spacing: 18px;
+    }
+    
+    #page-title-sub {
+        font-size: 36px;
+        letter-spacing: 12px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    
+    #page-title-main { 
+        font-size: 140px;
+        font-weight: 700;
+        letter-spacing: 18px;
+    }
+    
+    #page-title-sub {
+        font-size: 60px;
+        letter-spacing: 14px;
+    }
+}

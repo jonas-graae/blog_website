@@ -1,0 +1,488 @@
+@import url("css_partials/header.css");
+@import url("css_partials/footer.css");
+@import url("css_partials/blogpost.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #D9C39F;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+/**********************
+content
+***********************/
+
+main#mainpage-main {
+    position: absolute;
+    width: 100%;
+    top: 80vh;
+}
+
+section {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+section.blog {
+    margin-bottom: 100px;
+}
+
+#searchbar {
+    display: none;
+}
+
+.blog-item {
+    height: 500px;
+    Background-color: white;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin-bottom: 30px;
+}
+
+.blog-item img {
+    object-fit: cover;
+    height: 100%; 
+    width: 100%;
+    padding: 10px;
+}
+
+.blog-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.blog-item a:visited {
+    color: black;
+}
+
+.blog-item.image-full {
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    color:#fff;
+    display: block;
+}
+
+.blog-item.image-full a,
+.blog-item.image-full a:visited {
+    color: #fff;
+}
+
+.image-full .blog-content-card {
+    width: 85%;
+    margin: 125px auto 0;
+    text-align: center;
+}
+
+.blog-item-inner {
+    padding: 0 20px 20px;
+    height: 100%;
+    position: relative;
+}
+
+.blog-item-inner p {
+    margin-top: 10px;
+    line-height: 1.50;
+}
+
+.blog-item-inner h3 {
+    font-size: 1.75rem;
+    margin-bottom: 5px
+}
+
+.blog-item-inner h4 {
+    font-style: italic;
+    color: darkgrey;
+}
+
+.image-full .blog-item-inner h4 {
+    color: #fff;
+}
+
+.blog-details-bottom {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 40px);
+}
+
+.blog-details, 
+.blog-details-bottom {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-full .blog-details {
+    padding-top: 10px;
+}
+ 
+.image-full .blog-details-bottom {
+    flex-direction: column-reverse;
+    height: 30%;
+}
+
+.blog-details-bottom a.read-more {
+    background-color: black;
+    color: #fff;
+    padding: 14px 5px;
+    border-radius: 50%;
+}
+
+.image-full .blog-details-bottom a.read-more {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 17px 80px;
+    border-radius: 10px;
+}
+
+.blog-item.item-3 { 
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/summergirl.jpg");
+}
+    
+.blog-item.item-5 { 
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/ananas.jpg");
+}
+
+/*******************
+Testamonial section
+*******************/
+
+.testamonials {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+}
+
+.testamonial-card {
+    padding: 20px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto auto;
+    margin-bottom: 20px;
+}
+
+.testamonial-card img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+ .testamonial-card h2 {
+     margin: 10px 0;
+     font-size: 1.5rem;
+     text-align: left;
+ }
+
+ .testamonial-card h3 {
+    font-size: 1rem;
+    font-style: italic;
+    color: darkgrey;
+}
+
+.testamonial-quote {
+    margin-top: 10px;
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-start: 3;
+}
+
+blockquote:before{
+    content: '\201C';
+    color: rgba(0, 0, 0, 0.15);
+    font-size: 120px;
+    font-family: sans-serif;
+    position: absolute;
+    top: -15%;
+    z-index: 1000;    
+}
+
+.testamonial-card p {
+    padding: 15px 10px 10px;
+    text-align: center;
+    line-height: 175%;
+    z-index: 2000;
+    font-size: 0.9rem;
+}
+
+/*******************
+Footer subscribe
+*******************/
+
+.subscribe {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.05) 60%, #D9C39F), url("img/sunset.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+    padding-top: 200px;
+    margin: -150px 0 0; 
+}
+
+.subscribe h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 750px) {
+    
+    .blog-container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px 500px 500px 500px;
+    }
+
+    #searchbar {
+        background-color: rgba(0, 0, 0, 0.15);
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        align-items: center;
+        padding: 0 2.5%;
+        box-sizing: border-box;
+    }
+    
+    #searchbar-icon {
+        font-size: 35px;
+        width: 10%;
+    }
+    
+    #searchbar-text {
+        font-size: 35px;
+        height: 100px;
+        width: 90%;
+        border: none;
+        background-color: transparent;
+    }
+    
+    #searchbar-text::placeholder {
+        color: #000;
+    }
+
+    .blog-item {
+        margin-bottom: 0;
+    }
+
+    .blog-item-inner h3 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .blog-item.item-5 { 
+        display: none;
+    }
+
+    .image-full .blog-content-card {
+        position: absolute;
+        top: 0;
+    }
+
+    .blog-details { 
+        display: none;
+    }
+
+    .testamonial-card {
+        grid-template-columns: 30% 70%;
+        padding: 10px;
+    }
+
+    .testamonial-card img {
+        width: 90%;
+        height: auto;
+        border-radius: 0;
+        grid-row-start: 1;
+        grid-row-end: 3; 
+    }
+
+    .testamonial-quote {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .testamonial-card p {
+        font-size: 1rem;
+        text-align: left;
+    }
+  }
+
+@media screen and (min-width: 1050px) {
+
+    main#mainpage-main {
+        top: 85vh;
+    }
+
+    #searchbar-icon {
+        width: 5%;
+    }
+    
+    #searchbar-text {
+        width: 95%;
+    }
+
+    .blog-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px 600px 600px 600px;
+        gap: 25px;
+    }
+
+    .blog-item {
+        height: 600px;
+    }
+
+    .blog-item img {
+        padding: 0;
+    }
+
+    .blog-item.item-2 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .item-2 .blog-content-card,
+    .item-6 .blog-content-card {
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .image-full .blog-content-card {
+        position: relative;
+    }
+
+    .blog-item.item-5 { 
+        display: block;
+    }
+    
+    .blog-item.item-6 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .blog-item-inner {
+        padding: 10px 20px 20px;
+    }
+    
+    .blog-details { 
+        display: flex;
+    }
+
+    #searchbar {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    blockquote:before{
+        font-size: 200px;
+        top: -30%;
+        left: -2%;      
+    }
+
+    .testamonials-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 50px;
+    }
+
+    .testamonial-card {
+        grid-template-columns: 40% 60%;
+    }
+
+    .subscribe {
+        padding-top: 150px;
+        margin: -100px 0 0;     
+        display: flex;
+    }
+
+    .subscribe h2 {
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .subscribe h3 {
+        margin-left: 60px;
+        text-align: left;
+        font-size: 2.7rem;
+    }
+
+    .subscribe-text {
+        margin-top: 125px;
+        width: 50%;
+    }
+
+    .subscribe-button-container {
+        margin-top: 200px;
+        width: 50%;
+    }
+
+    #subscribe-btn {
+        background-color: #000;
+        color: #fff;
+        padding: 20px 70px;
+        border-radius: 30px;
+    }
+
+    #subscribe-btn:hover {
+        background-color: transparent;
+        color: #000;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .testamonial-card {
+        padding: 0;
+    }
+
+    .testamonial-card img {
+        margin: 20px 0 -15px 20px;
+        width: 80%;
+        height: auto;
+        -webkit-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+    }
+
+    .testamonial-headings {
+        margin-top: 20px;
+    }
+
+    .testamonial-card p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    section {
+        padding: 0 10%; 
+    }
+
+    .subscribe {
+        padding-top: 200px;
+    }
+}
